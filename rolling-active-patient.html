@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rolling Active Patient Reporting - Case Study</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #1a1a1a;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    body {
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin: 0 0 2rem 0;
+      color: #1a1a1a;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+      color: #1a1a1a;
+    }
+
+    p {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.7;
+      margin: 0 0 1rem 0;
+    }
+
+    .challenge-box {
+      background: #f0f4ff;
+      border-left: 4px solid #2563eb;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+      border-radius: 4px;
+      font-size: 15px;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .card {
+      background: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+
+    .card-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 1.25rem;
+      font-size: 14px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .card li {
+      margin-bottom: 0.5rem;
+    }
+
+    .divider {
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1.5rem 0;
+      margin: 2.5rem 0;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      color: #666;
+      margin-top: 2.5rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Rolling Active Patient Reporting</h1>
+
+    <div class="challenge-box">
+      <strong>The challenge:</strong> A correctional healthcare operations team needed to quickly answer "who is currently active on this treatment table?" without manually filtering data or waiting for analyst reports. Existing reporting required manual updates and was prone to errors.
+    </div>
+
+    <section>
+      <h2>The solution</h2>
+      <p>Built a self-serve Power BI dashboard that dynamically calculates active patient status based on rolling treatment-date windows. Instead of static snapshots, the dashboard uses DAX measures to determine who's "active" relative to a configurable lookback period—patients move in and out automatically as their treatment dates shift.</p>
+    </section>
+
+    <div class="grid-3">
+      <div class="card">
+        <p class="card-label">What I built</p>
+        <ul>
+          <li>Custom DAX measures for rolling-window active status</li>
+          <li>Drill-down from cohort counts to patient-level detail</li>
+          <li>Dynamic filters for date ranges and treatment tables</li>
+          <li>Automated refresh synced to source data</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <p class="card-label">Technical stack</p>
+        <ul>
+          <li>Power BI DAX</li>
+          <li>SQL (source extraction)</li>
+          <li>DateTable relationships</li>
+          <li>Real-time refresh scheduling</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <p class="card-label">Impact</p>
+        <ul>
+          <li>Eliminated recurring manual reports</li>
+          <li>Answers provided in seconds, not hours</li>
+          <li>Reusable DAX pattern across other tables</li>
+          <li>Self-serve means no analyst bottleneck</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider">
+      <h2>Why this matters</h2>
+      <p>This dashboard demonstrates the core principle of my work: taking a messy operational question and turning it into a clean, data-driven answer. Operations teams shouldn't need to wrangle spreadsheets or wait for reports—they should be able to ask "who's active right now?" and get an instant, accurate answer. The DAX pattern I built is reusable across other treatment tables and healthcare cohort scenarios.</p>
+    </div>
+
+    <p class="footer-text">Built at PrimeCare Medical. Data structure anonymized.</p>
+  </div>
+</body>
+</html>
