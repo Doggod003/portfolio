@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Sam Everett</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #1a1a1a;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    body {
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+      color: #1a1a1a;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: #666;
+      margin: 0 0 2rem 0;
+      line-height: 1.7;
+    }
+
+    .intro-box {
+      background: #f9fafb;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-option {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 0.5px solid #e5e7eb;
+    }
+
+    .contact-option:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .option-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .option-value {
+      display: block;
+      font-size: 16px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 0 0.5rem 0;
+      transition: color 0.2s ease;
+    }
+
+    .option-value:hover {
+      color: #1d4ed8;
+      text-decoration: underline;
+    }
+
+    .option-hint {
+      font-size: 13px;
+      color: #666;
+      margin: 0;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      margin-top: 1.5rem;
+    }
+
+    .cta-button:hover {
+      background: #1d4ed8;
+    }
+
+    .footer-note {
+      font-size: 13px;
+      color: #999;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 0.5px solid #e5e7eb;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .container {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Let's work together</h1>
+    <p class="subtitle">
+      I'm available for healthcare operations consulting, Power BI dashboards, EHR design, and marketing work. For project inquiries, email is fastest.
+    </p>
+
+    <div class="intro-box">
+      <div class="contact-option">
+        <p class="option-label">Email (fastest)</p>
+        <a href="mailto:everetts1@appstate.edu" class="option-value">everetts1@appstate.edu</a>
+        <p class="option-hint">Responds within 1-2 business days</p>
+      </div>
+
+      <div class="contact-option">
+        <p class="option-label">LinkedIn</p>
+        <a href="https://www.linkedin.com/in/samueleverett" class="option-value">linkedin.com/in/samueleverett</a>
+        <p class="option-hint">Connect for opportunities and portfolio updates</p>
+      </div>
+
+      <div class="contact-option">
+        <p class="option-label">Phone</p>
+        <a href="tel:+19194449757" class="option-value">(919) 444-9757</a>
+        <p class="option-hint">For serious conversations</p>
+      </div>
+    </div>
+
+    <a href="mailto:everetts1@appstate.edu" class="cta-button">Send an email</a>
+
+    <p class="footer-note">
+      Based in Central PA. Working with healthcare organizations and local businesses. Looking forward to connecting.
+    </p>
+  </div>
+</body>
+</html>
