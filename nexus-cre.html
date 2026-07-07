@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus CRE - Case Study</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #1a1a1a;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    body {
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin: 0 0 2rem 0;
+      color: #1a1a1a;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+      color: #1a1a1a;
+    }
+
+    p {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.7;
+      margin: 0 0 1rem 0;
+    }
+
+    .challenge-box {
+      background: #f0f4ff;
+      border-left: 4px solid #2563eb;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+      border-radius: 4px;
+      font-size: 15px;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .card {
+      background: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+
+    .card-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 1.25rem;
+      font-size: 14px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .card li {
+      margin-bottom: 0.5rem;
+    }
+
+    .divider {
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1.5rem 0;
+      margin: 2.5rem 0;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      color: #666;
+      margin-top: 2.5rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    .highlight {
+      background: #f0f9ff;
+      border-left: 4px solid #0ea5e9;
+      padding: 1rem 1.5rem;
+      border-radius: 4px;
+      margin: 1.5rem 0;
+      font-size: 14px;
+      color: #1a1a1a;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      font-size: 15px;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    ul li {
+      margin-bottom: 0.75rem;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .grid-4 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Nexus CRE</h1>
+    <p style="font-size: 16px; color: #666; margin-bottom: 2rem;"><em>Commercial real estate data platform with data-confidence layer</em></p>
+
+    <div class="challenge-box">
+      <strong>The problem:</strong> Commercial real estate data lives in multiple systems—listings, ownership records, tax assessments, broker databases. The same property can have conflicting values across them. Existing tools either ignore conflicts or force users to pick a "source of truth" without showing the disagreement. Real estate analysts spend more time reconciling fragmented data than actually analyzing it.
+    </div>
+
+    <section>
+      <h2>The solution</h2>
+      <p>Built Nexus CRE—a React-based commercial real estate data platform with a data-confidence layer that surfaces reconciliation conflicts as first-class information. Instead of hiding disagreements, the platform makes them visible and actionable, helping analysts quickly identify which data is reliable and which needs verification.</p>
+
+      <div class="highlight">
+        <strong>Core insight:</strong> Data confidence isn't about perfection—it's about transparency. By surfacing where sources disagree and flagging properties that meet user-defined criteria, analysts can trust the data they're working with and spend time on analysis instead of reconciliation.
+      </div>
+    </section>
+
+    <div class="grid-4">
+      <div class="card">
+        <p class="card-label">What I built</p>
+        <ul>
+          <li>React dashboard with property-level views</li>
+          <li>Portfolio-level rollups and analytics</li>
+          <li>Data confidence layer</li>
+          <li>Conflict visualization</li>
+          <li>Custom flagging engine</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <p class="card-label">Technical stack</p>
+        <ul>
+          <li>React + JavaScript</li>
+          <li>Data modeling</li>
+          <li>Real estate domain research</li>
+          <li>UX/UI design iteration</li>
+          <li>Interactive data visualization</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <p class="card-label">Outcome</p>
+        <ul>
+          <li>Interactive prototype built</li>
+          <li>Design pattern established</li>
+          <li>Reconciliation workflow demonstrated</li>
+          <li>Multiple UX iterations completed</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <p class="card-label">What it demonstrates</p>
+        <ul>
+          <li>Front-end development</li>
+          <li>Product design thinking</li>
+          <li>Domain research capability</li>
+          <li>Complex problem scoping</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider">
+      <h2>Why this matters</h2>
+      <p>Nexus CRE demonstrates my ability to take a vague, messy domain problem—"real estate data is fragmented"—and turn it into a structured, interactive product that makes the core issue visible and actionable.</p>
+      
+      <p>This project shows:</p>
+      <ul>
+        <li><strong>Product thinking under constraints</strong> — Understanding a domain deeply enough to know what data quality actually means in context</li>
+        <li><strong>Frontend development</strong> — Building interactive, performant React applications that handle complex datasets</li>
+        <li><strong>UX design iteration</strong> — Multiple rounds refining how conflicts and confidence are displayed to maximize analyst efficiency</li>
+        <li><strong>Problem scoping</strong> — Starting with a fuzzy problem statement and building a focused, testable prototype that validates the core thesis</li>
+      </ul>
+    </div>
+
+    <section>
+      <h2>Current status</h2>
+      <p>Nexus CRE is a fully functional prototype demonstrating the core data-confidence workflow. The design pattern is reusable across other fragmented data domains. Ready for user testing with real estate analysts and institutional investors.</p>
+    </section>
+
+    <p class="footer-text">Nexus CRE prototype. Commercial real estate data platform concept.</p>
+  </div>
+</body>
+</html>
