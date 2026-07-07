@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOA Subdivision Outreach - Case Study</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #1a1a1a;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    body {
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin: 0 0 2rem 0;
+      color: #1a1a1a;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+      color: #1a1a1a;
+    }
+
+    p {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.7;
+      margin: 0 0 1rem 0;
+    }
+
+    .challenge-box {
+      background: #f0f4ff;
+      border-left: 4px solid #2563eb;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+      border-radius: 4px;
+      font-size: 15px;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .card {
+      background: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+
+    .card-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 1.25rem;
+      font-size: 14px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .card li {
+      margin-bottom: 0.5rem;
+    }
+
+    .divider {
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1.5rem 0;
+      margin: 2.5rem 0;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      color: #666;
+      margin-top: 2.5rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    .highlight {
+      background: #f0f9ff;
+      border-left: 4px solid #0ea5e9;
+      padding: 1rem 1.5rem;
+      border-radius: 4px;
+      margin: 1.5rem 0;
+      font-size: 14px;
+      color: #1a1a1a;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      font-size: 15px;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    ul li {
+      margin-bottom: 0.75rem;
+    }
+
+    .stat {
+      display: inline-block;
+      margin-right: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-number {
+      font-size: 18px;
+      font-weight: 600;
+      color: #2563eb;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: #666;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .grid-4 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat {
+        margin-right: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HOA Subdivision Outreach System</h1>
+    <p style="font-size: 16px; color: #666; margin-bottom: 2rem;"><em>GIS-driven targeted outreach for landscaping and local services</em></p>
+
+    <div class="challenge-box">
+      <strong>The problem:</strong> Landscaping clients wanted to target specific high-value neighborhoods, not blanket zip codes. They needed a way to identify HOA-governed subdivisions, visualize boundaries, and pull mailing lists for homeowner-occupied parcels. The underlying data lived in Dauphin County GIS exports—technical, fragmented, and not designed for marketing use.
+    </div>
+
+    <section>
+      <h2>The solution</h2>
+      <p>Built a GIS-driven targeting system that translates public county parcel data into a marketing tool. Pulled subdivision and parcel boundaries from Dauphin County GIS, mapped HOA-governed neighborhoods, and assembled an Excel workbook that ties subdivision-level targeting to mailing-list-ready outputs. Non-technical landscaping clients could now mail and door-knock specific subdivisions instead of guessing at zip codes.</p>
+
+      <div class="highlight">
+        <strong>Core insight:</strong> The data already exists in county GIS systems. The barrier isn't data availability—it's converting raw GIS exports into something a small landscaping business can actually use to find customers.
+      </div>
+    </section>
+
+    <section>
+      <h2>Initial deployment</h2>
+      <p>First deployment targeted Lower Paxton and Susquehanna Townships in Dauphin County, starting with the highest-value subdivisions:</p>
+      <div style="margin: 1rem 0;">
+        <div class="stat">
+          <div class="stat-number">847</div>
+          <div class="stat-label">homeowner parcels</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">4</div>
+          <div class="stat-label">HOA subdivisions</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">$455K</div>
+          <div class="stat-label">median home value</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid-4">
+      <div class="card">
+        <p class="card-label">What I built</p>
+        <ul>
+          <li>Pulled subdivision and parcel data from Dauphin County GIS</li>
+          <li>Built outreach map showing HOA boundaries and parcels</li>
+          <li>Assembled Excel workbook tying GIS data to mailing lists</li>
+          <li>Translated technical GIS layer into marketing tool</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <p class="card-label">Technical stack</p>
+        <ul>
+          <li>Dauphin County GIS data</li>
+          <li>Excel (advanced data structuring)</li>
+          <li>Mapping and boundary visualization</li>
+          <li>Marketing strategy & targeting</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <p class="card-label">Outcome</p>
+        <ul>
+          <li>Gave clients reusable subdivision targeting system</li>
+          <li>Same approach extensible to other townships and counties</li>
+          <li>Framework applicable to other verticals (real estate, contracting)</li>
+          <li>Competitive advantage through targeted outreach</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <p class="card-label">What it demonstrates</p>
+        <ul>
+          <li>Cross-functional execution</li>
+          <li>Public data sourcing and structuring</li>
+          <li>Converting technical data into business tools</li>
+          <li>Local market knowledge (Central PA)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider">
+      <h2>Why this matters</h2>
+      <p>This project demonstrates something often overlooked: the ability to take freely available public data (county GIS), structure it, and convert it into a tool that directly helps a client win business. It's not flashy, but it's valuable.</p>
+      
+      <p>This project highlights:</p>
+      <ul>
+        <li><strong>Public data literacy</strong> — Knowing where county GIS exports live, how to interpret them, and how to repurpose them for non-GIS use</li>
+        <li><strong>Cross-functional execution</strong> — Pulling data, mapping boundaries, structuring outputs, and translating into something a non-technical landscaper can use</li>
+        <li><strong>Practical business thinking</strong> — Understanding that small services businesses need targeted outreach tools, not generic marketing advice</li>
+        <li><strong>Scalability mindset</strong> — Building the first deployment in a way that's extensible to other townships, counties, and verticals without starting from scratch</li>
+      </ul>
+    </div>
+
+    <section>
+      <h2>Extensibility</h2>
+      <p>The same approach is applicable to other Dauphin County townships, neighboring counties, and other service verticals (real estate prospecting, contractor outreach, financial services). The core pattern—public GIS data → structured targeting tool—repeats.</p>
+    </section>
+
+    <p class="footer-text">Built for Stonemark Studios and landscaping clients in Central PA.</p>
+  </div>
+</body>
+</html>
