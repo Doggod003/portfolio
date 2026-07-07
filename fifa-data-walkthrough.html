@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIFA Data Walkthrough - How to Access the Data</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #1a1a1a;
+      background: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    body {
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .header {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border: 0.5px solid #e5e7eb;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+      color: #1a1a1a;
+    }
+
+    .intro {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 8px 16px;
+      background: #f0f4ff;
+      color: #2563eb;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.2s ease;
+    }
+
+    .back-link:hover {
+      background: #e0e7ff;
+    }
+
+    .source-section {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border: 0.5px solid #e5e7eb;
+    }
+
+    .source-section h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+      color: #1a1a1a;
+    }
+
+    .source-label {
+      font-size: 13px;
+      color: #999;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+    }
+
+    .source-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      padding: 10px 16px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.2s ease;
+    }
+
+    .source-link:hover {
+      background: #1d4ed8;
+    }
+
+    .step {
+      background: #f9fafb;
+      border-left: 4px solid #2563eb;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 4px;
+    }
+
+    .step-number {
+      font-size: 12px;
+      font-weight: 600;
+      color: #2563eb;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 0.75rem 0;
+      color: #1a1a1a;
+    }
+
+    .step-content {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .tip {
+      background: #f0f9ff;
+      border-left: 4px solid #0ea5e9;
+      padding: 1rem 1.5rem;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 13px;
+      color: #1a1a1a;
+    }
+
+    .code-block {
+      background: #1a1a1a;
+      color: #00ff00;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      margin: 1rem 0;
+      line-height: 1.6;
+    }
+
+    .methodology-box {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      border: 0.5px solid #e5e7eb;
+      margin-bottom: 2rem;
+    }
+
+    .methodology-box h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+      color: #1a1a1a;
+    }
+
+    .methodology-box p {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .methodology-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      color: #999;
+      font-size: 13px;
+      border-top: 0.5px solid #e5e7eb;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      .source-section {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>FIFA Data Walkthrough</h1>
+      <p class="intro">
+        A step-by-step guide to accessing and exploring the real data sources behind the FIFA World Cup Travel Revenue analysis. Learn where to find fertility rate trends, tourism statistics, and demographic data.
+      </p>
+      <a href="https://doggod003.github.io/portfolio/fifa-travel-analysis.html" class="back-link">← Back to FIFA Analysis</a>
+    </div>
+
+    <div class="source-section">
+      <div class="source-label">Data Source 1</div>
+      <h2>World Bank - Fertility Rate Data</h2>
+      
+      <a href="https://data.worldbank.org/indicator/SP.DYN.TFRT.IN" class="source-link" target="_blank">Open World Development Indicators →</a>
+
+      <div class="step">
+        <div class="step-number">Step 1: Navigate to the Indicator</div>
+        <div class="step-title">Access Fertility Rate Data</div>
+        <div class="step-content">
+          Go to <strong>data.worldbank.org</strong> and search for "Fertility Rate" or use the direct link above. You'll land on the SP.DYN.TFRT.IN indicator page, which tracks "Fertility rate (births per woman)" globally.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">Step 2: Select Your Time Range</div>
+        <div class="step-title">Filter to 1990-2023</div>
+        <div class="step-content">
+          On the chart, use the date slider to select from 1990 onwards. World Bank data is updated annually, with most recent data typically available 1-2 years after collection.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">Step 3: Download the Data</div>
+        <div class="step-title">Export as CSV or Excel</div>
+        <div class="step-content">
+          Look for the download icon (usually in the chart toolbar). Select "Download data" and choose CSV format. This gives you all countries and years in a spreadsheet-ready format.
+        </div>
+      </div>
+
+      <div class="tip">
+        <strong>Tip:</strong> Filter by "World" (aggregate) to see global average fertility rates, or download all countries to analyze regional variations (developed vs. developing nations have very different fertility trends).
+      </div>
+    </div>
+
+    <div class="source-section">
+      <div class="source-label">Data Source 2</div>
+      <h2>UNWTO - International Tourism Statistics</h2>
+      
+      <a href="https://www.unwto.org/tourism-statistics" class="source-link" target="_blank">Open UNWTO Statistics →</a>
+
+      <div class="step">
+        <div class="step-number">Step 1: Explore the Data Portal</div>
+        <div class="step-title">Access International Travel Data</div>
+        <div class="step-content">
+          UNWTO (United Nations World Tourism Organization) tracks international arrivals and tourism spending by country. Visit their main statistics page and look for "UNWTO Data & Reporting."
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">Step 2: Find World Cup Host Nations</div>
+        <div class="step-title">Filter by Year & Country</div>
+        <div class="step-content">
+          World Cups are held every 4 years (1994, 1998, 2002, 2006, 2010, 2014, 2018, 2022). Look at international tourism data for those years in host nations: USA (1994), France (1998), Korea/Japan (2002), Germany (2006), South Africa (2010), Brazil (2014), Russia (2018), Qatar (2022).
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">Step 3: Cross-Reference with Tourism Revenue</div>
+        <div class="step-title">Track Spending Patterns</div>
+        <div class="step-content">
+          UNWTO data includes both visitor counts and tourism receipts (spending). Compare World Cup years to surrounding years to isolate the tournament's impact on tourism spending.
+        </div>
+      </div>
+
+      <div class="tip">
+        <strong>Tip:</strong> International tourist arrivals spike during World Cup years. The analysis estimates revenue decline by comparing multi-year trends, accounting for host nation tourism infrastructure and regional differences.
+      </div>
+    </div>
+
+    <div class="source-section">
+      <div class="source-label">Data Source 3</div>
+      <h2>FIFA - World Cup Official Statistics</h2>
+      
+      <a href="https://www.fifa.com/tournaments/mens/worldcup" class="source-link" target="_blank">Open FIFA World Cup Data →</a>
+
+      <div class="step">
+        <div class="step-number">Step 1: Access Tournament Archives</div>
+        <div class="step-title">View Historical World Cups</div>
+        <div class="step-content">
+          FIFA's website archives every World Cup dating back to 1930. Navigate to "All Tournaments" or "Tournament Archive" to access each World Cup's official data.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">Step 2: Examine Tournament Details</div>
+        <div class="step-title">Attendance & Viewership Metrics</div>
+        <div class="step-content">
+          For each World Cup, FIFA publishes: total attendance, average attendance per match, host nation, and key statistics. These serve as proxies for tourism volume—higher attendance generally means more international visitors.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">Step 3: Cross-Check Media Reports</div>
+        <div class="step-title">Find Economic Impact Studies</div>
+        <div class="step-content">
+          Host nations typically commission economic impact studies. Search "[Host Country] World Cup economic impact report [Year]" to find official revenue and tourism estimates published by host governments.
+        </div>
+      </div>
+
+      <div class="tip">
+        <strong>Tip:</strong> FIFA data is authoritative for attendance but doesn't directly publish tourism revenue. Host nation reports and UNWTO data provide the actual economic impact figures.
+      </div>
+    </div>
+
+    <div class="source-section">
+      <div class="source-label">Data Source 4</div>
+      <h2>UN Population Division - Demographic Trends</h2>
+      
+      <a href="https://population.un.org/wpp/" class="source-link" target="_blank">Open UN World Population Prospects →</a>
+
+      <div class="step">
+        <div class="step-number">Step 1: Access WPP Database</div>
+        <div class="step-title">World Population Prospects</div>
+        <div class="step-content">
+          UN Population Division maintains the most authoritative global demographic data. Their "World Population Prospects" (WPP) is updated every 2 years and includes fertility rates, population structure, and projections.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">Step 2: Download Fertility Datasets</div>
+        <div class="step-title">Select Historical Data (1990-2022)</div>
+        <div class="step-content">
+          WPP provides data across multiple releases. Select the fertility rate indicators and download historical data. The UN's estimates often differ slightly from World Bank due to methodology—using both provides a robustness check.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">Step 3: Analyze by Development Level</div>
+        <div class="step-title">Developed vs. Developing Nations</div>
+        <div class="step-content">
+          Filter data by development classification. Developed nations show steeper fertility declines (driving reduced World Cup tourism), while developing nations show slower changes.
+        </div>
+      </div>
+
+      <div class="tip">
+        <strong>Tip:</strong> The UN also publishes "replacement level fertility" (2.1 children per woman). Many developed nations have fallen below this, which has implications for workforce size, household composition, and discretionary spending.
+      </div>
+    </div>
+
+    <div class="source-section">
+      <div class="source-label">Data Source 5</div>
+      <h2>Our World in Data - Visualized Trends</h2>
+      
+      <a href="https://ourworldindata.org/grapher/children-per-woman" class="source-link" target="_blank">Open Fertility Rate Visualizations →</a>
+
+      <div class="step">
+        <div class="step-number">Step 1: Explore Interactive Charts</div>
+        <div class="step-title">See Global Fertility Trends</div>
+        <div class="step-content">
+          Our World in Data curates World Bank and UN data with excellent interactive visualizations. Their fertility rate chart lets you compare all countries side-by-side, toggle log/linear scales, and see historical trends clearly.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">Step 2: Download Underlying Data</div>
+        <div class="step-title">Access Source Datasets</div>
+        <div class="step-content">
+          Every OWID chart includes a "Download" link that provides the underlying data (already cleaned and structured). This is often the easiest starting point for analysis.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">Step 3: Verify Against Primary Sources</div>
+        <div class="step-title">Cross-Check World Bank & UN</div>
+        <div class="step-content">
+          OWID sources its data from World Bank and UN. Using OWID data alongside direct World Bank/UN downloads ensures consistency and provides a good sanity check on your analysis.
+        </div>
+      </div>
+
+      <div class="tip">
+        <strong>Tip:</strong> OWID is excellent for exploratory analysis and visualization inspiration. Their charts are publication-quality and their methodology is transparent.
+      </div>
+    </div>
+
+    <div class="methodology-box">
+      <h2>Analytical Methodology</h2>
+      
+      <p>
+        <strong>Correlation Analysis:</strong> The FIFA analysis uses correlation coefficient (Pearson's r) to measure the relationship between fertility rates and tourism revenue. A coefficient of 0.87 indicates a strong positive relationship: as fertility rates decline, tourism revenue declines correlatively.
+      </p>
+
+      <p>
+        <strong>Data Aggregation:</strong> Individual World Cup years are treated as observations. Fertility rates are global averages (World Bank "World" aggregate). Tourism revenue is estimated by combining: (a) official World Cup attendance figures, (b) host nation economic impact reports, and (c) UNWTO tourism spending data for World Cup years.
+      </p>
+
+      <p>
+        <strong>Time Lag Considerations:</strong> Demographic changes (fertility rates) typically lead behavioral changes (travel patterns) by 5-10 years. A family born in 1990 travels in 2010-2015. The analysis aligns fertility rate changes with tourism impacts at appropriate time horizons.
+      </p>
+
+      <p>
+        <strong>Limitations:</strong> This analysis is demonstrative. A rigorous study would: (1) use actual World Cup tourism data (not estimates), (2) control for confounding variables (economic cycles, cost of travel, competing events), (3) test for causality (not just correlation), and (4) validate findings across multiple time periods and geographic regions.
+      </p>
+    </div>
+
+    <div class="footer">
+      <p>Data Walkthrough Guide. Created to demonstrate how to access and use real global datasets for analytical exploration.</p>
+      <p style="margin-top: 1rem;"><a href="https://doggod003.github.io/portfolio/fifa-travel-analysis.html" style="color: #2563eb; text-decoration: none;">← Back to FIFA Analysis</a></p>
+    </div>
+  </div>
+</body>
+</html>
