@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCS Marketing Collateral System - Case Study</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #1a1a1a;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    body {
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin: 0 0 2rem 0;
+      color: #1a1a1a;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+      color: #1a1a1a;
+    }
+
+    p {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.7;
+      margin: 0 0 1rem 0;
+    }
+
+    .challenge-box {
+      background: #f0f4ff;
+      border-left: 4px solid #2563eb;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+      border-radius: 4px;
+      font-size: 15px;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .card {
+      background: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+
+    .card-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 1.25rem;
+      font-size: 14px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .card li {
+      margin-bottom: 0.5rem;
+    }
+
+    .divider {
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1.5rem 0;
+      margin: 2.5rem 0;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      color: #666;
+      margin-top: 2.5rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    .highlight {
+      background: #f0f9ff;
+      border-left: 4px solid #0ea5e9;
+      padding: 1rem 1.5rem;
+      border-radius: 4px;
+      margin: 1.5rem 0;
+      font-size: 14px;
+      color: #1a1a1a;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      font-size: 15px;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    ul li {
+      margin-bottom: 0.75rem;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .grid-4 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>MCS Marketing Collateral System</h1>
+    <p style="font-size: 16px; color: #666; margin-bottom: 2rem;"><em>Python-based PDF generation pipeline for scaled healthcare marketing</em></p>
+
+    <div class="challenge-box">
+      <strong>The problem:</strong> PrimeCare Medical needed recurring, high-quality marketing materials—recruiting packets, conference collateral, B2B outreach to county jail administrators. Each custom-designed multi-page packet took time in InDesign or Canva and didn't scale across repeated use cases. Manual design work had high turnaround and couldn't keep pace with multiple simultaneous campaigns.
+    </div>
+
+    <section>
+      <h2>The solution</h2>
+      <p>Built MCS—a Python-based PDF generation pipeline that produces marketing packets at scale. The system uses Python and ReportLab to programmatically generate multi-page PDFs with consistent branding, variable content, and precise formatting. Templates are defined once, then reused and customized for different campaigns without manual redesign.</p>
+
+      <div class="highlight">
+        <strong>Core capability:</strong> Define a marketing packet template once (layout, typography, brand assets), then generate hundreds of variations by swapping copy, images, and targeting data. No design tool required for subsequent campaigns.
+      </div>
+    </section>
+
+    <section>
+      <h2>What it produced</h2>
+      <p>The system generated three major campaign suites:</p>
+      <ul>
+        <li><strong>Nurses Week (May 2026)</strong> — Recognition posters, magnets, gift tags, appreciation cards, booth flyers, sticker sheets for recognition events</li>
+        <li><strong>NCCHC Conference 2026</strong> — Booth collateral and candidate-facing recruiting content, with companion React landing page for digital sign-ups</li>
+        <li><strong>County Jail Administrator B2B Packet</strong> — Sales/outreach collateral targeting decision-makers in correctional facilities</li>
+      </ul>
+    </section>
+
+    <div class="grid-4">
+      <div class="card">
+        <p class="card-label">What I built</p>
+        <ul>
+          <li>Python PDF generation pipeline</li>
+          <li>Template system with variable content</li>
+          <li>Multi-page packet production</li>
+          <li>Brand asset management</li>
+          <li>Batch generation capability</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <p class="card-label">Technical stack</p>
+        <ul>
+          <li>Python</li>
+          <li>ReportLab (PDF generation)</li>
+          <li>Pillow (image processing)</li>
+          <li>pypdf (PDF manipulation)</li>
+          <li>Marketing strategy & positioning</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <p class="card-label">Outcome</p>
+        <ul>
+          <li>Replaced one-off design work with reusable system</li>
+          <li>Campaigns shipped faster</li>
+          <li>Branding consistent across all deployments</li>
+          <li>Templates reused for subsequent campaigns</li>
+          <li>Scalable to unlimited variations</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <p class="card-label">What it demonstrates</p>
+        <ul>
+          <li>Hybrid marketing + technical skills</li>
+          <li>Campaign strategy and execution</li>
+          <li>Backend automation for creative work</li>
+          <li>Healthcare & corrections marketing</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider">
+      <h2>Why this matters</h2>
+      <p>MCS demonstrates something rare: the ability to both run marketing campaigns AND build the automation that produces them. Most marketers don't code. Most developers don't do marketing. This system shows I can do both.</p>
+      
+      <p>This project highlights:</p>
+      <ul>
+        <li><strong>Marketing strategy</strong> — Understanding what messaging works for recruiting (nurses week recognition, candidate-facing content), conferences (competitive positioning), and B2B outreach (decision-maker targeting)</li>
+        <li><strong>Technical execution</strong> — Building a production-grade PDF generation system that handles brand consistency, variable content, and batch operations</li>
+        <li><strong>Operational leverage</strong> — Replacing manual, repetitive work with automated systems that scale without additional effort</li>
+        <li><strong>Healthcare/corrections domain knowledge</strong> — Positioning and messaging tailored to healthcare recruitment and county jail administration</li>
+      </ul>
+    </div>
+
+    <section>
+      <h2>Current status</h2>
+      <p>MCS is a production system actively used at PrimeCare Medical. The template library is expandable and has proven successful across three major campaign cycles. Ready to adapt for other healthcare organizations or industries with recurring collateral needs.</p>
+    </section>
+
+    <p class="footer-text">Built at PrimeCare Medical. Used in production for recruiting and sales marketing.</p>
+  </div>
+</body>
+</html>
